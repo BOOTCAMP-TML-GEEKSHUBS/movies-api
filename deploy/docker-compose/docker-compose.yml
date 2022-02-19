@@ -7,11 +7,11 @@ services:
     depends_on:
       - movies_mongo
     build:
-      context: ./../../sources/api-v1/
+      context: ./../../sources/
       dockerfile: ./Dockerfile
-    command: bash -c "nodemon ."
+    command: bash -c "node ."
     volumes:
-      - ./../../sources/api-v1:/usr/src/app
+      - ./../../sources:/usr/src/app
     ports:
       - "3000:3000"
     environment:

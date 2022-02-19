@@ -1,2 +1,4 @@
+install:
+	cd deploy/docker-compose/ && docker-compose run movies-api npm i
 build:
-	cd sources && docker build -t geekshubsdevops/movies-api:latest . && docker push geekshubsdevops/movies-api:latest
+	cd sources && docker build -t movies-api:latest . 
